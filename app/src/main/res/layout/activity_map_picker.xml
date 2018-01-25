@@ -1,0 +1,73 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/vista">
+
+    <fragment
+        android:id="@+id/mapa"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:id="@+id/confirmPosition"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/changeMap"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/changeMap"
+        android:background="@drawable/corners_button"
+        android:elevation="8dp"
+        android:onClick="confirmPosition"
+        android:src="@android:drawable/ic_menu_send"
+        android:text="@string/confirm_position" />
+
+    <ImageButton
+        android:id="@+id/changeMap"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/corners_button"
+        android:elevation="8dp"
+        android:onClick="changeMap"
+        android:src="@android:drawable/ic_dialog_map"
+        android:text="" />
+
+    <ImageButton
+        android:id="@+id/searchPosition"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/changeMap"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/changeMap"
+        android:background="@drawable/corners_button"
+        android:elevation="8dp"
+        android:onClick="searchText"
+        android:src="@android:drawable/ic_menu_search"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confirmPosition"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/corners_edittext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text=""
+        android:visibility="gone"/>
+
+</RelativeLayout>

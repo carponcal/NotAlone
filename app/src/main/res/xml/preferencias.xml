@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="preferencias_principal" >
+
+    <PreferenceCategory android:title="Opciones de búsqueda">
+    <EditTextPreference android:key="distancia"
+        android:title="Distancia a actividades"
+        android:summary="Distancia en kilómetros (0 = sin filtro)"
+        android:inputType="number"
+        android:defaultValue="0"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
